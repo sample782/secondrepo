@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selenium Actions Example</title>
+    <style>
+        #hoverElement {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+        }
+        #rightClickElement {
+            width: 200px;
+            height: 100px;
+            background-color: lightgreen;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="hoverElement">Hover over me!</div>
+<div id="rightClickElement">Right Click on me!</div>
+
+<script>
+    document.getElementById('hoverElement').addEventListener('mouseover', function() {
+        alert('Mouse is over the hover element!');
+    });
+
+    document.getElementById('rightClickElement').addEventListener('contextmenu', function(event) {
+        event.preventDefault();
+        alert('Right click action performed!');
+    });
+</script>
+
+</body>
+</html>
